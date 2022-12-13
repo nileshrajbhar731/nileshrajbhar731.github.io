@@ -187,6 +187,7 @@
         <center class="center"> 
             <h1><strong style="text-shadow:2px 2px 2px #2400ff; color: rgb(0, 89, 255);">Hi,i'm Nilesh Bhardwaj</strong></h1>
             
+            <h3><strong class="web" id="visits"></strong></h3>
             <h3><strong class="web">Web Developer</strong></h3>
   
             <a href="#project"><button type="button" id="buttons"> See my project</button></a>
@@ -2994,9 +2995,17 @@ dots[slideIndex-1].className += " active";
         'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js';
       document.body.appendChild(script);
     }
+    // website count
+    function websiteVisits(response) {
+    // document.querySelector("#visits").textContent = response.value;
+    document.querySelector("#visits").innerHTML = `
+    ${ response.value} <i class="fa fa-users"></i>
+    `;
+}
   </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script async src="https://api.countapi.xyz/hit/nileshrajbhar731.github.io/b2c2492b-9ba4-4bde-8488-52f277ee300f?callback=websiteVisits"></script>
 </body>
 </html>
