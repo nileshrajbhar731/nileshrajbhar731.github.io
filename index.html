@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url=https://nileshrajbhar731.vercel.app/">
-  <script>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
+
+<style>
+  body{
+    font-family: Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+  }
+  .box{
+    background:#1e293b;
+    padding:40px;
+    border-radius:10px;
+  }
+  .count{
+    font-size:40px;
+    font-weight:bold;
+    color:#38bdf8;
+  }
+  a{
+    color:#38bdf8;
+  }
+</style>
+
+<script>
+let seconds = 5;
+
+function countdown(){
+  document.getElementById("count").innerText = seconds;
+  seconds--;
+
+  if(seconds < 0){
     window.location.href = "https://nileshrajbhar731.vercel.app/";
-  </script>
+  } else {
+    setTimeout(countdown,1000);
+  }
+}
+
+window.onload = countdown;
+</script>
+
 </head>
+
 <body>
-Redirecting...
+
+<div class="box">
+  <h2>Redirecting to Portfolio</h2>
+  <p>You will be redirected in <span class="count" id="count">5</span> seconds</p>
+  <p>If not redirected click below</p>
+  <a href="https://nileshrajbhar731.vercel.app/">Go Now</a>
+</div>
+
 </body>
 </html>
